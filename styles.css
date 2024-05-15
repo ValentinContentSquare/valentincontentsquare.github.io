@@ -43,3 +43,16 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+.about {
+    padding: 20px;
+}
+
+.about form {
+    margin-top: 20px;
+}
+
+.about form input, .about form button {
+    padding: 10px;
+    margin-right: 10px;
+}
