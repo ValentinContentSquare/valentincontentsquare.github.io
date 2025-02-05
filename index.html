@@ -34,10 +34,19 @@
 <main>
     <p>Welcome to our fake e-commerce website. We offer a variety of products to suit your needs. Our mission is to provide high-quality products at affordable prices.</p>
     <form id="aboutForm">
-        <label for="feedback">Heap identify() as:</label>
-        <input type="text" id="feedback" name="feedback">
-        <button type="button" onclick="heapIdentify()">Submit</button>
+        <label for="identity">Identify as:</label>
+        <input type="text" id="identity" name="identity">
+        <input type="checkbox" id="hash" name="hash" checked />
+        <label for="hash">Should hash Identity ?</label>
+        <button type="button" onclick="heapIdentify()">Identify</button>
     </form>
+    <form id="userPropsForm">
+        <label for="userprop1value">User properties (as JSON) example: {'type':'premium'}:</label>
+        <input type="text" id="userprop1value" name="userprop1value">
+        <button type="button" onclick="addUserProperties()">Add User properties</button>
+    </form>
+    <button type="button" onclick="resetIdentity()">Reset Identity</button>
+    <button type="button" onclick="getIdentity()">Get Identity</button>
     <section class="products">
         <h2>Featured Products</h2>
         <div class="product">

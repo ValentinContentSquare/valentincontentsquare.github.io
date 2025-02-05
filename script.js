@@ -1,8 +1,26 @@
 function heapIdentify() {
-    const feedback = document.getElementById('feedback').value;
-    heap.identify(feedback);
-    alert('Thank you for your feedback: ' + feedback);
+    const identity = document.getElementById('identity').value;
+    const hash = document.getElementById('hash').checked;
+    window._uxa.push(["identify", identity, {hash}]);
+    alert('Identified as: ' + identity);
 }
+
+function addUserProperties() {
+    const prop1value = document.getElementById('userprop1value').value;
+    const propsJson = JSON.parse(prop1value);
+    window._uxa.push(["addUserProperties", propsJson]);
+    alert('Added user properties: ' + propsJson);
+}
+
+function resetIdentity() {
+    window._uxa.push(["resetIdentity"]);
+    alert('Identity reseted');
+}
+
+function getIdentity() {
+    alert('Identity: ' + window._uxa.push(["getIdentity"]));
+}
+window._uxa.push(["getIdentity"]);
 
 // cf https://docs.contentsquare.com/en/web/sending-ecommerce-commands/#sending-a-transaction-without-cs-merchandising
 function triggerCSTransaction(kittyPrice) {
