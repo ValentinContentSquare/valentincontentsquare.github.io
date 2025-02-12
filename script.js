@@ -20,7 +20,6 @@ function resetIdentity() {
 function getIdentity() {
     alert('Identity: ' + window._uxa.push(["getIdentity"]));
 }
-window._uxa.push(["getIdentity"]);
 
 // cf https://docs.contentsquare.com/en/web/sending-ecommerce-commands/#sending-a-transaction-without-cs-merchandising
 function triggerCSTransaction(kittyPrice) {
