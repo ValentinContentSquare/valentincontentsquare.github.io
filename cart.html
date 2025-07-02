@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoption Cart - Precious Paws Kitten Paradise</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>🐱 Precious Paws Kitten Paradise 🐱</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="shop.html">🛍️ Shop</a></li>
+            <li><a href="cart.html">🛒 Cart</a></li>
+            <li><a href="about.html">ℹ️ About</a></li>
+            <li><a href="contact.html">📞 Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="cart-header">
+        <h2>🛒 Your Adoption Cart</h2>
+        <p>Review your selected kittens before proceeding to adoption!</p>
+        <img src="https://images.unsplash.com/photo-1571566882372-1598d88abd90?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" alt="Happy kitten in basket" class="cart-hero-image">
+    </section>
+
+    <section class="cart-content">
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be populated by JavaScript -->
+            <div class="empty-cart" id="emptyCart">
+                <img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?w=300&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" alt="Sad kitten">
+                <h3>Your cart is empty! 😿</h3>
+                <p>Looks like you haven't selected any kittens yet. Browse our adorable selection!</p>
+                <a href="shop.html" class="browse-btn">🛍️ Browse Kittens</a>
+            </div>
+        </div>
+
+        <div class="cart-summary" id="cartSummary" style="display: none;">
+            <h3>📋 Adoption Summary</h3>
+            <div class="summary-details">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Health Certificate Fee:</span>
+                    <span>$50.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Microchipping (optional):</span>
+                    <span>$25.00</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span id="total">$75.00</span>
+                </div>
+            </div>
+            
+            <div class="checkout-section">
+                <h3>🏡 Adoption Application</h3>
+                <form id="adoptionForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">Home Address *</label>
+                        <textarea id="address" name="address" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="experience">Experience with Cats:</label>
+                        <select id="experience" name="experience">
+                            <option value="first-time">First-time cat owner</option>
+                            <option value="some">Some experience</option>
+                            <option value="experienced">Very experienced</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="household">Household Composition:</label>
+                        <textarea id="household" name="household" placeholder="Tell us about your family, other pets, etc."></textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="microchip" name="microchip">
+                        <label for="microchip">Add microchipping service (+$25)</label>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the adoption terms and conditions *</label>
+                    </div>
+                    
+                    <button type="submit" class="checkout-btn">💖 Submit Adoption Application</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="adoption-process">
+        <h2>🌟 Next Steps After Submission</h2>
+        <div class="process-steps">
+            <div class="step">
+                <h3>1️⃣ Application Review</h3>
+                <p>We'll review your application within 24 hours and contact you to discuss your kitten choice.</p>
+            </div>
+            <div class="step">
+                <h3>2️⃣ Meet & Greet</h3>
+                <p>Schedule a visit to meet your chosen kitten(s) and ensure it's a perfect match!</p>
+            </div>
+            <div class="step">
+                <h3>3️⃣ Final Preparations</h3>
+                <p>We'll prepare your kitten's health documents and provide care instructions.</p>
+            </div>
+            <div class="step">
+                <h3>4️⃣ Take Them Home!</h3>
+                <p>Complete the adoption and welcome your new family member home! 🏠💕</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonials">
+        <h2>💝 Happy Families</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial">
+                <img src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?w=100&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" alt="Happy family">
+                <p>"We adopted Luna 6 months ago and she's brought so much joy to our family! The team at Precious Paws was wonderful throughout the entire process."</p>
+                <span>- Sarah & Mike Johnson</span>
+            </div>
+            <div class="testimonial">
+                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=100&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" alt="Happy family">
+                <p>"Storm is the perfect addition to our home! He's so well-socialized and healthy. Thank you Precious Paws!"</p>
+                <span>- Emma Rodriguez</span>
+            </div>
+            <div class="testimonial">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" alt="Happy family">
+                <p>"The best kitten adoption experience ever! Professional, caring, and they truly love their kittens."</p>
+                <span>- David & Lisa Chen</span>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Precious Paws Kitten Paradise - Made with 💖 for kitten lovers</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
