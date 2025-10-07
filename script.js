@@ -35,6 +35,8 @@ function triggerCSTransaction(kittyPrice) {
 
     // Send the information to Contentsquare
     window._uxa.push(['ec:transaction:send']);
+
+    window._uxa.push(["setCustomVariable", 1, 'kittyPrice', kittyPrice]);
     
     // Show a cute adoption confirmation
     showAdoptionConfirmation(kittyPrice);
