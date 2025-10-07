@@ -37,6 +37,7 @@ function triggerCSTransaction(kittyPrice) {
     window._uxa.push(['ec:transaction:send']);
 
     window._uxa.push(["setCustomVariable", 1, 'cVarKittyPrice', kittyPrice]);
+    window._uxa.push(["setCustomVariable", 2, 'cVarKittyPrice2', kittyPrice, 3]); // scope 3 = page
     window._uxa.push(["trackDynamicVariable", { key: 'dVarKittyPrice', value: kittyPrice }]);
     window._uxa.push(["trackPageEvent", "addToCart"]);
     window._uxa.push([
