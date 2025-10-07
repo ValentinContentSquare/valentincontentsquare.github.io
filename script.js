@@ -36,8 +36,15 @@ function triggerCSTransaction(kittyPrice) {
     // Send the information to Contentsquare
     window._uxa.push(['ec:transaction:send']);
 
-    window._uxa.push(["setCustomVariable", 1, 'kittyPrice', kittyPrice]);
-    
+    window._uxa.push(["setCustomVariable", 1, 'cVarKittyPrice', kittyPrice]);
+    window._uxa.push(["trackDynamicVariable", { key: 'dVarKittyPrice', value: kittyPrice }]);
+    window._uxa.push(["trackPageEvent", "addToCart"]);
+    window._uxa.push([
+        "ec:cart:add",
+        {
+        merchant: window.location.hostname
+        },
+  ]);
     // Show a cute adoption confirmation
     showAdoptionConfirmation(kittyPrice);
 }
